@@ -10,8 +10,9 @@ app.use(cors());
 // app.use(express.json());
 // app.use(bodyParser.json());
 
-app.use("/products", api.products);
-app.use("/users", api.users);
+app.use("/api/v1/products", api.products);
+// app.use("/api/v2/products", api.products);
+app.use("/api/v1/users", api.users);
 
 app.use((_, res)=> {
     res.status(404).json({
